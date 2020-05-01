@@ -1,0 +1,41 @@
+﻿@model BLOGAPP.Models.Blog
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h1>@Model.Baslık</h1>
+<hr />
+<p>
+    <span class="glyphicon glyphicon-time"></span>
+    @Model.EklenmeTarihi
+
+</p>
+<hr />
+<img class="img-responsive" src="~/Resimler/@Model.Resim" alt="" />
+<hr />
+<blockquote>
+    <p>@Model.Acıklama</p>
+</blockquote>
+
+<p>@Model.Icerik</p>
+
+<img class="img-responsive" src="~/Resimler/04.png" alt="" />
+
+<br />
+
+<img class="img-responsive" src="~/Resimler/05.png" alt="" />
+<br />
+
+
+<div class="comment">
+    <div class="well">
+        <h4>YORUM YAP:</h4>
+        <form role="form">
+            <div class="form-group">
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">KAYDET</button>
+        </form>
+    </div>
+</div>

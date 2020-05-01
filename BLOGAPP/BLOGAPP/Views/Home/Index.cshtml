@@ -1,0 +1,81 @@
+﻿
+@model IEnumerable<BLOGAPP.Models.BlogModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>YAZILIM DİLLERİ...</h2>
+
+
+<div class="row">
+
+
+    <hr />
+    <img src="~/Resimler/222.png" />
+    <img src="~/Resimler/444.png" />
+    <img src="~/Resimler/55.jpg" />
+    <img src="~/Resimler/66.jpg" />
+    <img src="~/Resimler/77.jpg" />
+    <img src="~/Resimler/asp-net-hosting-80x80.png" />
+    <img src="~/Resimler/10.jpg " />
+    <img src="~/Resimler/11.jpg" />
+    <img src="~/Resimler/12.png" />
+    <img src="~/Resimler/88.png" />
+    <img src="~/Resimler/88.jpg" />
+    <img src="~/Resimler/111.png" />
+
+    <br />
+
+
+    @foreach (var blog in Model)
+    {
+
+
+        <div class="blog">
+
+
+
+            <p>
+                <h3 class="page-header">
+
+                    @blog.Baslık
+                </h3>
+            <p>
+                <span class="glyphicon glyphicon-time">
+                    @blog.EklenmeTarihi
+
+                </span>
+
+                <br />
+                <br />
+
+                @blog.Acıklama
+                <br />
+                <br />
+                <br />
+
+                <img class="img-responsive"        src="~/Resimler/04.png" />
+ 
+           
+
+
+            </p>
+            <hr />
+
+
+
+            @Html.ActionLink("Yazılım dili hakkında daha fazla bilgi ...", "Details", "Blog", new { Id = @blog.Id },
+           new { @class="btn btn-primary"})
+
+        </div>
+    }
+
+
+
+
+</div>
+
+
+
+
